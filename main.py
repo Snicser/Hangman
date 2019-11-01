@@ -13,7 +13,6 @@ def getRandomWord(wordList):
 
 
 def game_setup():
-    # Testen of het een getal is
     try:
         total_players = int(input("Speel jij de game zelf of met meerdere personen? Voer een getal in.\n"))
     except ValueError:
@@ -50,12 +49,11 @@ def start_game(total_players):
 
     while guesses_over > 0:
 
-        # Checken er alleen alfabet karakters zijn ingevoerd bijvoorbeeld 'abc' 'ABC'
+        # Checken of alleen alfabet karakters zijn ingevoerd bijvoorbeeld 'abc' 'ABC'
         while True:
             user_input1 = input("\nTyp een woord of een letter.\n")
             user_input = user_input1[0].lower()
 
-            # Checken of het een woord is
             if user_input.isalpha():
                 break
 
@@ -66,7 +64,6 @@ def start_game(total_players):
             print("\nJij wint! Je hebt het woord in 1 keer goed geraden! Het woord was namelijk:", random_word)
             break
 
-        # Loop door elk karakter van het ingevulde input
         for char in random_word:
 
             if user_input == char:
