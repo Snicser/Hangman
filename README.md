@@ -1,2 +1,2 @@
 # Hangman
-School project
+First python school project
